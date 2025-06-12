@@ -8,23 +8,6 @@ public class Main {
     public static void main(String[] args) {
 
       /* List of demands:
-       * - Maven project: check!
-       *
-       * Calculator should support:
-       * - Addition: check!
-       * - Subtraction: check!
-       * - Multiplication: check!
-       * - Division: check!
-       *
-       * User input demands:
-       * - Enter the numbers: check!
-       * - Enter the operand: check!
-       * - Ask user to make another calculation or exit: check!
-       *
-       * Looping demands:
-       * - Continue running until user ends the calculator: check!
-       *
-       * Optional demands:
        * - Subtraction and Addition should be able to process several numbers:
        *   - Some sort of list of double is required.
        *       - To let the user determine on how many numbers will be added to the list
@@ -34,36 +17,29 @@ public class Main {
        *   - Some sort of user input for stop typing numbers is needed.
        *       - If user types done, break the loop.
        *       - As long as user is not done, add number to numbers-list.
+       * - JUnit tests: Check out what this is.
        *
-       * - Verify user inputs and handle invalid inputs:
-       *   - Need to fix so you can write 1.6 and 1,6. At the moment it sees 1.6 as invalid input.
-       * - JUnit tests:
+       *  - Todo for tomorrow:
+       *     - Breakout the case to MathOperations.java.
+       *     - Finish the support for adding and subtracting several numbers.
+       *     - See what JUnit tests is.
        */
 
-        /* Scanner used for user inputs. */
         Scanner scanner = new Scanner(System.in);
-        /* As long as boolean is true, the calculator will run. */
+
         boolean continueRunning = true;
 
-        /* Welcome-message to the user. */
         showWelcomeMessage();
 
         /* While-loop to ensure continuous running of the calculator until user exits.*/
         while (continueRunning) {
 
-            /* Calls out to the InputValidator-class and the getValidNumber-method. */
             double numberOne = InputValidator.getValidNumber(scanner);
 
-            /* Calls out to the InputValidator-class and the getValidOperand-method. */
             char operand = InputValidator.getValidOperand(scanner);
 
-            /* Calls out to the InputValidator-class and the getValidNumber-method. */
             double numberTwo = InputValidator.getValidNumber(scanner);
 
-            /* Declares the result and sets it to 0.
-            *  Does the calculations depending on what case operand is.
-            *  Checks for division by zero in case '/'.
-            */
             double result = 0;
             switch (operand) {
                 case '+':
@@ -88,7 +64,6 @@ public class Main {
             /* Prints the result. Replace with method later. */
             System.out.println("\nResult: " + numberOne + " " + operand+ " "  + numberTwo + " = "  + result);
 
-            /* Calls out to the UserInterface-class and the askToContinue-method. */
             continueRunning = UserInterface.askToContinue(scanner);
 
         }

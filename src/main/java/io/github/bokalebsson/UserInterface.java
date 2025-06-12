@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-    /* Shows a welcome message to the user then the calculator starts. */
+    /* Shows a welcome message to the user then the calculator starts */
     public static void showWelcomeMessage() {
         System.out.println("Welcome to the Calculator!");
         System.out.println("--------------------------");

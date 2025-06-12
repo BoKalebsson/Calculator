@@ -3,8 +3,10 @@ package io.github.bokalebsson;
 public class MathOperations {
 
     /*
-     * I want all the mathematics operation related things here.
-     * */
+     * Todo:
+     *  - Move the case from Main.java to here.
+     *  - Implement a solution for several numbers with + and -.
+     */
 
 
 }
