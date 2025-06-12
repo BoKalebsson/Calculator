@@ -16,13 +16,13 @@ public class UserInterface {
     */
     public static boolean askToContinue(Scanner scanner) {
         while (true) {
-            System.out.print("Do you want to perform another calculation? (y/n): ");
+            System.out.print("\nDo you want to perform another calculation? (y/n): ");
             String input = scanner.next().trim().toLowerCase();
 
             if (input.equals("y") || input.equals("yes")) {
                 return true;
             } else if (input.equals("n") || input.equals("no")) {
-                System.out.println("Goodbye and thanks for using the Calculator!");
+                System.out.println("\nGoodbye and thanks for using the Calculator!");
                 return false;
             } else {
                 System.out.println("Invalid input. Please enter 'y' or 'n'.");

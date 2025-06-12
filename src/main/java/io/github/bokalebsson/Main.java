@@ -38,15 +38,14 @@ public class Main {
        * - Verify user inputs and handle invalid inputs:
        *   - Need to fix so you can write 1.6 and 1,6. At the moment it sees 1.6 as invalid input.
        * - JUnit tests:
-       * */
+       */
 
         /* Scanner used for user inputs. */
         Scanner scanner = new Scanner(System.in);
         /* As long as boolean is true, the calculator will run. */
         boolean continueRunning = true;
 
-        /* Some sort of greeting to the user. Replace with method later. */
-//        System.out.println("Welcome to the Calculator!");
+        /* Welcome-message to the user. */
         showWelcomeMessage();
 
         /* While-loop to ensure continuous running of the calculator until user exits.*/
@@ -86,8 +85,8 @@ public class Main {
                     break;
             }
 
-            /* Prints the result. */
-            System.out.println("Result: " + result);
+            /* Prints the result. Replace with method later. */
+            System.out.println("\nResult: " + numberOne + " " + operand+ " "  + numberTwo + " = "  + result);
 
             /* Calls out to the UserInterface-class and the askToContinue-method. */
             continueRunning = UserInterface.askToContinue(scanner);
