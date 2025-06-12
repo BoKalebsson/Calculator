@@ -29,6 +29,7 @@ public class InputValidator {
      *  Checks if the input is a numeric value.
      *  Returns the numeric value.
      *  Asks the user for another input if the input is not a numeric value.
+     *  For some reason a number like 1.6 triggers Invalid number, but 1,6 works.
      */
     public static double getValidNumber(Scanner scanner) {
         while (true) {
