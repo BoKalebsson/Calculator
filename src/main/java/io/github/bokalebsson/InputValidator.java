@@ -1,5 +1,7 @@
 package io.github.bokalebsson;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class InputValidator {
@@ -40,6 +42,38 @@ public class InputValidator {
                 System.out.println("Invalid number. Please enter a numeric value.");
             }
         }
+    }
+
+    /* Checks for a valid list of numbers:
+    *  Creates a list of doubles, and ask the user for inputs.
+    *  The loop will continue until user types done.
+    *  Fixes ',' to '.', and checks for invalid inputs and no input.
+    *  Returns the list of numbers.
+    */
+    public static List<Double> getNumberList(Scanner scanner) {
+        List<Double> numbers = new ArrayList<>();
+        System.out.println("\nEnter numbers one at a time. Type 'done' to finish:");
+
+        while (true) {
+            String input = scanner.next().trim().toLowerCase();
+
+            if (input.equals("done")) {
+                if (numbers.isEmpty()) {
+                    System.out.println("You must enter at least one number.");
+                    continue;
+                }
+                break;
+            }
+
+            try {
+                double number = Double.parseDouble(input.replace(",", "."));
+                numbers.add(number);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid number. Please enter a valid number or 'done'.");
+            }
+        }
+
+        return numbers;
     }
 
 }
