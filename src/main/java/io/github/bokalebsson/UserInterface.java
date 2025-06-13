@@ -18,7 +18,7 @@ public class UserInterface {
     */
     public static boolean askToContinue(Scanner scanner) {
         while (true) {
-            System.out.print("\nDo you want to perform another calculation? (y/n): ");
+            System.out.print("\nDo you want to perform another calculation? (y/n): \n");
             String input = scanner.next().trim().toLowerCase();
 
             if (input.equals("y") || input.equals("yes")) {
