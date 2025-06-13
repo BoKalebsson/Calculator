@@ -44,7 +44,7 @@ public class MathOperations {
                     System.out.println("\nResult: " + numberOne + " / " + numberTwo + " = " + result);
                 } else {
                     System.out.println("Division with 0 is not allowed.");
-                    return performCalculation(operand, scanner);  // fråga igen om division
+                    return performCalculation(operand, scanner);
                 }
                 break;
             }
